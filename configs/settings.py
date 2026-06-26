@@ -12,7 +12,7 @@ class Environment(StrEnum):
 
 
 class LLMProvider(StrEnum):
-    OLLAMA = "ollama"; OPENAI = "openai"; ANTHROPIC = "anthropic"
+    OLLAMA = "ollama"; OPENAI = "openai"; ANTHROPIC = "anthropic"; GEMINI = "gemini"
 
 
 class LogLevel(StrEnum):
@@ -61,7 +61,7 @@ class LLMSettings(BaseModel):
     api_key: str | None = None
     temperature: float = Field(default=0.0, ge=0.0, le=2.0)
     max_tokens: int = Field(default=1024, ge=1)
-
+    gemini_model: str = "gemini-2.0-flash"
 
 class RetrievalSettings(BaseModel):
     top_k: int = Field(default=5, ge=1)
