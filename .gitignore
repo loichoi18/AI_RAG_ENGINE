@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Env & secrets
+.env
+*.local
+
+# Caches / models
+.cache/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+models_cache/
+*.gguf
+
+# Qdrant local storage
+qdrant_storage/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

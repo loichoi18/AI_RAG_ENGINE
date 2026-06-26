@@ -1,0 +1,66 @@
+[
+  {"id": "q001", "query": "How are services deployed?", "document_id": "doc-deploy", "answer_spans": ["Docker containers orchestrated by Kubernetes"], "answer": "Services are deployed using Docker containers orchestrated by Kubernetes."},
+  {"id": "q002", "query": "What triggers the deployment process?", "document_id": "doc-deploy", "answer_spans": ["triggered by merging to the main branch"], "answer": "Merging to the main branch triggers the deployment process."},
+  {"id": "q003", "query": "How much traffic does a canary release receive first?", "document_id": "doc-deploy", "answer_spans": ["ten percent of traffic"], "answer": "A canary release rolls out to ten percent of traffic."},
+  {"id": "q004", "query": "How are rollbacks performed?", "document_id": "doc-deploy", "answer_spans": ["kubectl rollout undo"], "answer": "Rollbacks are performed with the kubectl rollout undo command."},
+  {"id": "q005", "query": "What approval do production deployments require?", "document_id": "doc-deploy", "answer_spans": ["approval from two reviewers"], "answer": "Production deployments require approval from two reviewers."},
+
+  {"id": "q006", "query": "What does authentication use?", "document_id": "doc-auth", "answer_spans": ["OAuth 2.0 with JSON Web Tokens"], "answer": "Authentication uses OAuth 2.0 with JSON Web Tokens."},
+  {"id": "q007", "query": "When do access tokens expire?", "document_id": "doc-auth", "answer_spans": ["Access tokens expire after fifteen minutes"], "answer": "Access tokens expire after fifteen minutes."},
+  {"id": "q008", "query": "How long are refresh tokens valid?", "document_id": "doc-auth", "answer_spans": ["Refresh tokens are valid for thirty days"], "answer": "Refresh tokens are valid for thirty days."},
+  {"id": "q009", "query": "Who is required to use multi-factor authentication?", "document_id": "doc-auth", "answer_spans": ["required for all admin accounts"], "answer": "Multi-factor authentication is required for all admin accounts."},
+  {"id": "q010", "query": "What is the minimum password length?", "document_id": "doc-auth", "answer_spans": ["at least twelve characters long"], "answer": "Passwords must be at least twelve characters long."},
+
+  {"id": "q011", "query": "When is a production incident declared?", "document_id": "doc-incident", "answer_spans": ["error rates exceed five percent"], "answer": "A production incident is declared when error rates exceed five percent."},
+  {"id": "q012", "query": "How is the on-call engineer paged?", "document_id": "doc-incident", "answer_spans": ["paged through PagerDuty"], "answer": "The on-call engineer is paged through PagerDuty."},
+  {"id": "q013", "query": "How often must severity one incidents post a status update?", "document_id": "doc-incident", "answer_spans": ["status update every thirty minutes"], "answer": "Severity one incidents require a status update every thirty minutes."},
+  {"id": "q014", "query": "When is a postmortem written?", "document_id": "doc-incident", "answer_spans": ["postmortem is written within three business days"], "answer": "A blameless postmortem is written within three business days."},
+  {"id": "q015", "query": "Who coordinates the incident response?", "document_id": "doc-incident", "answer_spans": ["incident commander coordinates the response"], "answer": "The incident commander coordinates the response."},
+
+  {"id": "q016", "query": "When do new engineers complete onboarding?", "document_id": "doc-onboard", "answer_spans": ["onboarding in their first two weeks"], "answer": "New engineers complete onboarding in their first two weeks."},
+  {"id": "q017", "query": "Who provisions laptops?", "document_id": "doc-onboard", "answer_spans": ["provisioned by the IT helpdesk"], "answer": "Laptops are provisioned by the IT helpdesk."},
+  {"id": "q018", "query": "How is access to repositories granted?", "document_id": "doc-onboard", "answer_spans": ["access management portal"], "answer": "Access to repositories is granted through the access management portal."},
+  {"id": "q019", "query": "What is each new hire assigned?", "document_id": "doc-onboard", "answer_spans": ["assigned an onboarding buddy"], "answer": "Each new hire is assigned an onboarding buddy."},
+
+  {"id": "q020", "query": "What is the primary datastore?", "document_id": "doc-db", "answer_spans": ["primary datastore is PostgreSQL version fifteen"], "answer": "The primary datastore is PostgreSQL version fifteen."},
+  {"id": "q021", "query": "How long are daily backups retained?", "document_id": "doc-db", "answer_spans": ["backups are retained for thirty five days"], "answer": "Daily backups are retained for thirty five days."},
+  {"id": "q022", "query": "How are database migrations applied?", "document_id": "doc-db", "answer_spans": ["migrations are applied with Alembic"], "answer": "Database migrations are applied with Alembic."},
+  {"id": "q023", "query": "What manages connection pooling?", "document_id": "doc-db", "answer_spans": ["pooling is managed by PgBouncer"], "answer": "Connection pooling is managed by PgBouncer."},
+
+  {"id": "q024", "query": "What collects metrics?", "document_id": "doc-monitor", "answer_spans": ["collected by Prometheus"], "answer": "Metrics are collected by Prometheus."},
+  {"id": "q025", "query": "What is used to visualize metrics?", "document_id": "doc-monitor", "answer_spans": ["visualized in Grafana"], "answer": "Metrics are visualized in Grafana."},
+  {"id": "q026", "query": "Where are logs aggregated?", "document_id": "doc-monitor", "answer_spans": ["aggregated in the ELK stack"], "answer": "Logs are aggregated in the ELK stack."},
+  {"id": "q027", "query": "What does distributed tracing use?", "document_id": "doc-monitor", "answer_spans": ["Distributed tracing uses OpenTelemetry"], "answer": "Distributed tracing uses OpenTelemetry."},
+  {"id": "q028", "query": "When do latency alerts fire?", "document_id": "doc-monitor", "answer_spans": ["latency exceeds two hundred milliseconds"], "answer": "Alerts fire when latency exceeds two hundred milliseconds."},
+
+  {"id": "q029", "query": "What conventions does the public API follow?", "document_id": "doc-api", "answer_spans": ["REST conventions over HTTPS"], "answer": "The public API follows REST conventions over HTTPS."},
+  {"id": "q030", "query": "What is the API rate limit?", "document_id": "doc-api", "answer_spans": ["one hundred requests per minute per client"], "answer": "Rate limiting allows one hundred requests per minute per client."},
+  {"id": "q031", "query": "What is the default page size of API responses?", "document_id": "doc-api", "answer_spans": ["default page size of fifty"], "answer": "API responses are paginated with a default page size of fifty."},
+  {"id": "q032", "query": "How does the API support asynchronous requests?", "document_id": "doc-api", "answer_spans": ["asynchronous requests through webhooks"], "answer": "The API supports asynchronous requests through webhooks."},
+  {"id": "q033", "query": "What do all API endpoints require?", "document_id": "doc-api", "answer_spans": ["endpoints require a bearer token"], "answer": "All endpoints require a bearer token."},
+
+  {"id": "q034", "query": "Where are secrets stored?", "document_id": "doc-security", "answer_spans": ["stored in HashiCorp Vault"], "answer": "Secrets are stored in HashiCorp Vault."},
+  {"id": "q035", "query": "How is data at rest encrypted?", "document_id": "doc-security", "answer_spans": ["at rest is encrypted with AES 256"], "answer": "Data at rest is encrypted with AES 256."},
+  {"id": "q036", "query": "How is traffic encrypted in transit?", "document_id": "doc-security", "answer_spans": ["in transit using TLS 1.3"], "answer": "All traffic is encrypted in transit using TLS 1.3."},
+  {"id": "q037", "query": "How often do vulnerability scans run?", "document_id": "doc-security", "answer_spans": ["Vulnerability scans run nightly"], "answer": "Vulnerability scans run nightly."},
+
+  {"id": "q038", "query": "How much paid vacation do employees accrue?", "document_id": "doc-hr", "answer_spans": ["twenty days of paid vacation per year"], "answer": "Employees accrue twenty days of paid vacation per year."},
+  {"id": "q039", "query": "How are vacation requests submitted?", "document_id": "doc-hr", "answer_spans": ["submitted through the HR portal"], "answer": "Vacation requests are submitted through the HR portal."},
+  {"id": "q040", "query": "How many unused vacation days carry over?", "document_id": "doc-hr", "answer_spans": ["carry over up to five days"], "answer": "Unused vacation days carry over up to five days."},
+  {"id": "q041", "query": "How long is parental leave?", "document_id": "doc-hr", "answer_spans": ["Parental leave is sixteen weeks"], "answer": "Parental leave is sixteen weeks."},
+
+  {"id": "q042", "query": "What versioning do releases follow?", "document_id": "doc-release", "answer_spans": ["Releases follow semantic versioning"], "answer": "Releases follow semantic versioning."},
+  {"id": "q043", "query": "When is a release candidate tagged?", "document_id": "doc-release", "answer_spans": ["tagged one week before launch"], "answer": "A release candidate is tagged one week before launch."},
+  {"id": "q044", "query": "What controls the gradual exposure of new features?", "document_id": "doc-release", "answer_spans": ["Feature flags control the gradual exposure"], "answer": "Feature flags control the gradual exposure of new features."},
+  {"id": "q045", "query": "Where are hotfixes branched from?", "document_id": "doc-release", "answer_spans": ["branched from the production tag"], "answer": "Hotfixes are branched from the production tag."},
+
+  {"id": "q046", "query": "When do unit tests run?", "document_id": "doc-testing", "answer_spans": ["Unit tests run on every pull request"], "answer": "Unit tests run on every pull request."},
+  {"id": "q047", "query": "What is the minimum code coverage threshold?", "document_id": "doc-testing", "answer_spans": ["coverage threshold is eighty percent"], "answer": "The minimum code coverage threshold is eighty percent."},
+  {"id": "q048", "query": "Where do integration tests run?", "document_id": "doc-testing", "answer_spans": ["against a staging environment"], "answer": "Integration tests run against a staging environment."},
+  {"id": "q049", "query": "What do performance tests measure?", "document_id": "doc-testing", "answer_spans": ["ninety fifth percentile latency"], "answer": "Performance tests measure the ninety fifth percentile latency."},
+
+  {"id": "q050", "query": "Where are customer tickets tracked?", "document_id": "doc-support", "answer_spans": ["tickets are tracked in Zendesk"], "answer": "Customer tickets are tracked in Zendesk."},
+  {"id": "q051", "query": "What is the first response time target?", "document_id": "doc-support", "answer_spans": ["first response time target is four hours"], "answer": "The first response time target is four hours."},
+  {"id": "q052", "query": "How often are knowledge base articles reviewed?", "document_id": "doc-support", "answer_spans": ["articles are reviewed quarterly"], "answer": "Knowledge base articles are reviewed quarterly."},
+  {"id": "q053", "query": "When are refunds processed?", "document_id": "doc-support", "answer_spans": ["Refunds are processed within five business days"], "answer": "Refunds are processed within five business days."}
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "document_id": "doc-deploy",
+    "title": "Deployment",
+    "acl": [],
+    "text": "Services are deployed using Docker containers orchestrated by Kubernetes. The deployment process is triggered by merging to the main branch. A canary release rolls out to ten percent of traffic before full rollout. Rollbacks are performed with the kubectl rollout undo command. Production deployments require approval from two reviewers."
+  },
+  {
+    "document_id": "doc-auth",
+    "title": "Authentication",
+    "acl": [],
+    "text": "Authentication uses OAuth 2.0 with JSON Web Tokens. Access tokens expire after fifteen minutes. Refresh tokens are valid for thirty days. Multi-factor authentication is required for all admin accounts. Passwords must be at least twelve characters long."
+  },
+  {
+    "document_id": "doc-incident",
+    "title": "Incident Response",
+    "acl": [],
+    "text": "A production incident is declared when error rates exceed five percent. The on-call engineer is paged through PagerDuty. Severity one incidents require a status update every thirty minutes. A blameless postmortem is written within three business days. The incident commander coordinates the response."
+  },
+  {
+    "document_id": "doc-onboard",
+    "title": "Onboarding",
+    "acl": ["group:hr"],
+    "text": "New engineers complete onboarding in their first two weeks. Laptops are provisioned by the IT helpdesk. Access to repositories is granted through the access management portal. Each new hire is assigned an onboarding buddy. The employee handbook is stored in the company wiki."
+  },
+  {
+    "document_id": "doc-db",
+    "title": "Database",
+    "acl": [],
+    "text": "The primary datastore is PostgreSQL version fifteen. Read replicas handle reporting queries. Daily backups are retained for thirty five days. Database migrations are applied with Alembic. Connection pooling is managed by PgBouncer."
+  },
+  {
+    "document_id": "doc-monitor",
+    "title": "Monitoring",
+    "acl": [],
+    "text": "Metrics are collected by Prometheus and visualized in Grafana. Logs are aggregated in the ELK stack. Distributed tracing uses OpenTelemetry. Alerts fire when latency exceeds two hundred milliseconds. Dashboards are reviewed during the weekly operations meeting."
+  },
+  {
+    "document_id": "doc-api",
+    "title": "Public API",
+    "acl": [],
+    "text": "The public API follows REST conventions over HTTPS. Rate limiting allows one hundred requests per minute per client. API responses are paginated with a default page size of fifty. The API supports asynchronous requests through webhooks. All endpoints require a bearer token."
+  },
+  {
+    "document_id": "doc-security",
+    "title": "Security",
+    "acl": ["group:engineering"],
+    "text": "Secrets are stored in HashiCorp Vault. Data at rest is encrypted with AES 256. All traffic is encrypted in transit using TLS 1.3. Security reviews are mandatory before each major release. Vulnerability scans run nightly."
+  },
+  {
+    "document_id": "doc-hr",
+    "title": "Time Off",
+    "acl": ["group:hr"],
+    "text": "Employees accrue twenty days of paid vacation per year. Vacation requests are submitted through the HR portal. Unused vacation days carry over up to five days. Sick leave does not require manager approval. Parental leave is sixteen weeks."
+  },
+  {
+    "document_id": "doc-release",
+    "title": "Releases",
+    "acl": [],
+    "text": "Releases follow semantic versioning. A release candidate is tagged one week before launch. Feature flags control the gradual exposure of new features. Hotfixes are branched from the production tag. The changelog is updated for every release."
+  },
+  {
+    "document_id": "doc-testing",
+    "title": "Testing",
+    "acl": [],
+    "text": "Unit tests run on every pull request. The minimum code coverage threshold is eighty percent. Integration tests run against a staging environment. End to end tests execute nightly. Performance tests measure the ninety fifth percentile latency."
+  },
+  {
+    "document_id": "doc-support",
+    "title": "Customer Support",
+    "acl": [],
+    "text": "Customer tickets are tracked in Zendesk. The first response time target is four hours. Escalations are routed to the engineering on-call. Knowledge base articles are reviewed quarterly. Refunds are processed within five business days."
+  }
+]
